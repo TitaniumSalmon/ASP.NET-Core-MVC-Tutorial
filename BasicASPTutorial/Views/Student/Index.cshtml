@@ -1,7 +1,16 @@
-﻿
+﻿@model IEnumerable<BasicASPTutorial.Models.Student>;
 @{
     ViewData["Title"] = "หน้าแรก";
 }
 
 <h1 class="text-center">คะแนนสอบวิชาคอมพิวเตอร์</h1>
+
+@foreach (var student in Model)
+{
+    <p>รหัสนักเรียน : @student.Id</p>
+    <p>ชื่อ : @student.Name</p>
+    <p>คะแนนสอบ : @student.Score</p>
+    <hr/>
+}
+
 
