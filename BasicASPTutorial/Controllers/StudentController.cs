@@ -28,6 +28,8 @@ namespace BasicASPTutorial.Controllers
             students.Add(s3);
             return View(students); 
         }
+
+        //GET METHOD
         public IActionResult Create()
         {
             return View();
