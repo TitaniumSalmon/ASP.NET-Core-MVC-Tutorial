@@ -8,12 +8,12 @@ namespace BasicASPTutorial.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [DisplayName("Student Name")]
+        [Required(ErrorMessage = "กรุณาป้อนชื่อนักเรียน")]
+        [DisplayName("ชื่อนักเรียน")]
         public string Name { get; set; }
 
-        [Range(0, 100, ErrorMessage = "Score must be between 0 and 100.")]
-        [DisplayName("Student Score")]
+        [Range(0, 100, ErrorMessage = "กรุณาป้อนคะแนนสอบระหว่าง 0 - 100")]
+        [DisplayName("คะแนนสอบ")]
         public int Score { get; set; }
     }
 }
